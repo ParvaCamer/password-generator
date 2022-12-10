@@ -1,0 +1,56 @@
+html {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+html body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(343deg, hsl(230deg, 80.49%, 16.08%) 0%, hsl(222.29deg, 80.92%, 16.42%) 8.1%, hsl(209.8deg, 82.02%, 17.36%) 15.8%, hsl(199.24deg, 83.41%, 18.71%) 23.1%, hsl(191.36deg, 84.84%, 20.32%) 30%, hsl(185.69deg, 86.17%, 22.07%) 36.6%, hsl(181.62deg, 87.34%, 23.86%) 43%, hsl(178.69deg, 88.57%, 26.13%) 49.2%, hsl(176.68deg, 89.74%, 28.76%) 55.3%, hsl(175.27deg, 90.65%, 31.16%) 61.3%, hsl(174.26deg, 91.37%, 33.33%) 67.4%, hsl(173.51deg, 91.93%, 35.24%) 73.5%, hsl(172.96deg, 92.38%, 36.89%) 79.8%, hsl(172.56deg, 92.72%, 38.24%) 86.3%, hsl(172.28deg, 92.97%, 39.29%) 93%, hsl(172.11deg, 93.14%, 40%) 100%);
+}
+html body .container {
+  z-index: 1;
+  width: 400px;
+  height: 700px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8156862745);
+}
+html body .container h1 {
+  margin-top: 0;
+}
+html body .container .rod {
+  border: 1px solid rgba(61, 61, 61, 0.158);
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+html body .container input[type=text],
+html body .container button {
+  width: 250px;
+  display: block;
+  margin: 0 auto;
+}
+html body .container input[type=text] {
+  padding: 15px;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+}
+html body .container button {
+  width: 150px;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  background: linear-gradient(343deg, hsl(230deg, 80.49%, 16.08%) 0%, hsl(222.29deg, 80.92%, 16.42%) 8.1%, hsl(209.8deg, 82.02%, 17.36%) 15.8%, hsl(199.24deg, 83.41%, 18.71%) 23.1%, hsl(191.36deg, 84.84%, 20.32%) 30%, hsl(185.69deg, 86.17%, 22.07%) 36.6%, hsl(181.62deg, 87.34%, 23.86%) 43%, hsl(178.69deg, 88.57%, 26.13%) 49.2%, hsl(176.68deg, 89.74%, 28.76%) 55.3%, hsl(175.27deg, 90.65%, 31.16%) 61.3%, hsl(174.26deg, 91.37%, 33.33%) 67.4%, hsl(173.51deg, 91.93%, 35.24%) 73.5%, hsl(172.96deg, 92.38%, 36.89%) 79.8%, hsl(172.56deg, 92.72%, 38.24%) 86.3%, hsl(172.28deg, 92.97%, 39.29%) 93%, hsl(172.11deg, 93.14%, 40%) 100%);
+  color: #ffffff;
+}
+
+/*# sourceMappingURL=style.css.map */
