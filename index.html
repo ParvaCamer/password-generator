@@ -17,21 +17,30 @@
             <div class="rod"></div>
         </div>
         <input type="text" name="password" id="password" readonly placeholder="Your password is..." />
-        <div id="div-slider">
-            <label for="password">Length :</label>
+        <div class="box-container" id="div-slider">
+            <span for="password">Password's length :</span>
             <input type="range" name="word-length" id="length" min="8" max="32" value="8" />
         </div>
-        <div id="div-uppercase">
-            <label for="uppercase">Add uppercases</label>
-            <input type="checkbox" name="uppercase" id="uppercase" />
+        <div class="box-container" id="div-uppercase">
+            <span for="uppercase">Include uppercases</span>
+            <label class="switch">
+                <input type="checkbox" name="uppercase" id="uppercase" />
+                <span class="slider round"></span>
+            </label>
         </div>
-        <div id="div-symbols">
-            <label for="symbols">Add symbols</label>
-            <input type="checkbox" name="symbols" id="symbols" />
+        <div class="box-container" id="div-symbols">
+            <span for="symbols">Include symbols</span>
+            <label class="switch">
+                <input type="checkbox" name="symbols" id="symbols" />
+                <span class="slider round"></span>
+            </label>
         </div>
-        <div id="div-numbers">
-            <label for="numbers">Add numbers</label>
-            <input type="checkbox" name="numbers" id="numbers" />
+        <div class="box-container" id="div-numbers">
+            <span for="numbers">Include numbers</span>
+            <label class="switch">
+                <input type="checkbox" name="numbers" id="numbers" />
+                <span class="slider round"></span>
+            </label>
         </div>
         <button id="generate">Create a password</button>
     </div>

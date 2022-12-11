@@ -1,20 +1,21 @@
 $gradient: linear-gradient(343deg,
-hsl(230, 80.49%, 16.08%) 0%,
-hsl(222.29, 80.92%, 16.42%) 8.1%,
-hsl(209.8, 82.02%, 17.36%) 15.8%,
-hsl(199.24, 83.41%, 18.71%) 23.1%,
-hsl(191.36, 84.84%, 20.32%) 30%,
-hsl(185.69, 86.17%, 22.07%) 36.6%,
-hsl(181.62, 87.34%, 23.86%) 43%,
-hsl(178.69, 88.57%, 26.13%) 49.2%,
-hsl(176.68, 89.74%, 28.76%) 55.3%,
-hsl(175.27, 90.65%, 31.16%) 61.3%,
-hsl(174.26, 91.37%, 33.33%) 67.4%,
-hsl(173.51, 91.93%, 35.24%) 73.5%,
-hsl(172.96, 92.38%, 36.89%) 79.8%,
-hsl(172.56, 92.72%, 38.24%) 86.3%,
-hsl(172.28, 92.97%, 39.29%) 93%,
-hsl(172.11, 93.14%, 40%) 100%);
+        hsl(230, 80.49%, 16.08%) 0%,
+        hsl(222.29, 80.92%, 16.42%) 8.1%,
+        hsl(209.8, 82.02%, 17.36%) 15.8%,
+        hsl(199.24, 83.41%, 18.71%) 23.1%,
+        hsl(191.36, 84.84%, 20.32%) 30%,
+        hsl(185.69, 86.17%, 22.07%) 36.6%,
+        hsl(181.62, 87.34%, 23.86%) 43%,
+        hsl(178.69, 88.57%, 26.13%) 49.2%,
+        hsl(176.68, 89.74%, 28.76%) 55.3%,
+        hsl(175.27, 90.65%, 31.16%) 61.3%,
+        hsl(174.26, 91.37%, 33.33%) 67.4%,
+        hsl(173.51, 91.93%, 35.24%) 73.5%,
+        hsl(172.96, 92.38%, 36.89%) 79.8%,
+        hsl(172.56, 92.72%, 38.24%) 86.3%,
+        hsl(172.28, 92.97%, 39.29%) 93%,
+        hsl(172.11, 93.14%, 40%) 100%);
+
 html {
     margin: 0;
     padding: 0;
@@ -63,6 +64,77 @@ html {
                 text-align: center;
                 border: none;
                 border-radius: 10px;
+            }
+
+            .box-container {
+                border: 1px solid black;
+                width: 250px;
+                height: 50px;
+                margin-left: auto;
+                margin-right: auto;
+                position: relative;
+
+
+                .switch {
+                    position: relative;
+                    display: inline-block;
+                    width: 52px;
+                    height: 24px;
+                }
+
+                .switch input {
+                    opacity: 0;
+                    width: 0;
+                    height: 0;
+                }
+
+                .slider {
+                    position: absolute;
+                    cursor: pointer;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: #50565A;
+                    -webkit-transition: .4s;
+                    transition: .4s;
+                }
+
+                .slider:before {
+                    position: absolute;
+                    content: "";
+                    height: 16px;
+                    width: 16px;
+                    left: 4px;
+                    bottom: 4px;
+                    background-color: white;
+                    -webkit-transition: .4s;
+                    transition: .4s;
+                }
+
+                input:checked+.slider {
+                    background-color: #84d0dd;
+                }
+
+                input:focus+.slider {
+                    box-shadow: 0 0 1px #84d0dd;
+                }
+
+                input:checked+.slider:before {
+                    -webkit-transform: translateX(26px);
+                    -ms-transform: translateX(26px);
+                    transform: translateX(26px);
+                }
+
+                /* Rounded sliders */
+                .slider.round {
+                    border-radius: 34px;
+                }
+
+                .slider.round:before {
+                    border-radius: 50%;
+                }
+
             }
 
             button {
