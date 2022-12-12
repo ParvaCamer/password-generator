@@ -60,26 +60,72 @@ html {
             }
 
             input[type="text"] {
-                padding: 15px;
                 text-align: center;
                 border: none;
+                cursor: default;
+            }
+
+            input[type="text"],
+            .box-container {
+                padding: 15px;
                 border-radius: 10px;
             }
 
+            #div-slider {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                span#length-password {
+                    position: absolute;
+                    top: 4px;
+                    left: 4px;
+                    font-size: 16px;
+                    color: #8b8b8b;
+                }
+                span#range-value {
+                    font-size: 2rem;
+                    margin: 10px 0 20px 0;
+                }
+                input[type="range"] {
+                    height: 5px;
+                    width: 200px;
+                    display: block;
+                    -webkit-appearance: none;
+                    background-color: #bdc3c7;
+                    border-radius: 5px;
+                    margin: 0 auto;
+                    margin-bottom: 10px;
+                    outline: 0;
+                }
+
+                input[type="range"]::-webkit-slider-thumb {
+                    -webkit-appearance: none;
+                    background-color: #84d0dd;
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 50%;
+                    border: 2px solid white;
+                    cursor: pointer;
+                }
+            }
+
             .box-container {
-                border: 1px solid black;
                 width: 250px;
-                height: 50px;
                 margin-left: auto;
                 margin-right: auto;
                 position: relative;
+                background-color: #ffffff;
 
+                span {
+                    float: left;
+                    font-size: 1.2em;
+                }
 
                 .switch {
                     position: relative;
-                    display: inline-block;
                     width: 52px;
                     height: 24px;
+                    float: right;
                 }
 
                 .switch input {
@@ -144,6 +190,7 @@ html {
                 padding: 15px;
                 background: $gradient;
                 color: #ffffff;
+                cursor: pointer;
             }
         }
     }

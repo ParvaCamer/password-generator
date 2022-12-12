@@ -18,25 +18,26 @@
         </div>
         <input type="text" name="password" id="password" readonly placeholder="Your password is..." />
         <div class="box-container" id="div-slider">
-            <span for="password">Password's length :</span>
-            <input type="range" name="word-length" id="length" min="8" max="32" value="8" />
+            <span for="password" id="length-password">Password's length :</span>
+            <span for="value" id="range-value">8</span>
+            <input type="range" name="word-length" id="length" value="8" min="8" max="32" value="8" onchange="rangeSlide(this.value)" onmousemove="rangeSlide(this.value)"/>
         </div>
         <div class="box-container" id="div-uppercase">
-            <span for="uppercase">Include uppercases</span>
+            <span for="uppercase">Include uppercases :</span>
             <label class="switch">
                 <input type="checkbox" name="uppercase" id="uppercase" />
                 <span class="slider round"></span>
             </label>
         </div>
         <div class="box-container" id="div-symbols">
-            <span for="symbols">Include symbols</span>
+            <span for="symbols">Include symbols :</span>
             <label class="switch">
                 <input type="checkbox" name="symbols" id="symbols" />
                 <span class="slider round"></span>
             </label>
         </div>
         <div class="box-container" id="div-numbers">
-            <span for="numbers">Include numbers</span>
+            <span for="numbers">Include numbers :</span>
             <label class="switch">
                 <input type="checkbox" name="numbers" id="numbers" />
                 <span class="slider round"></span>
