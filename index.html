@@ -20,7 +20,8 @@
         <div class="box-container" id="div-slider">
             <span for="password" id="length-password">Password's length :</span>
             <span for="value" id="range-value">8</span>
-            <input type="range" name="word-length" id="length" value="8" min="8" max="32" value="8" onchange="rangeSlide(this.value)" onmousemove="rangeSlide(this.value)"/>
+            <input type="range" name="word-length" id="length" value="8" min="8" max="32"
+                onchange="rangeSlide(this.value)" onmousemove="rangeSlide(this.value)" />
         </div>
         <div class="box-container" id="div-uppercase">
             <span for="uppercase">Include uppercases :</span>
@@ -43,7 +44,7 @@
                 <span class="slider round"></span>
             </label>
         </div>
-        <button id="generate">Create a password</button>
+        <button id="generate" onclick="generatePassword()">Create a password</button>
     </div>
     <script src="script.js"></script>
 </body>
