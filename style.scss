@@ -33,7 +33,7 @@ html {
         .container {
             z-index: 1;
             width: 400px;
-            height: 700px;
+            height: 70vh;
             border-radius: 20px;
             display: flex;
             flex-direction: column;
@@ -63,6 +63,9 @@ html {
                 text-align: center;
                 border: none;
                 cursor: default;
+                &:focus-visible {
+                    outline: 0px #ffffff;
+                }
             }
 
             input[type="text"],
@@ -82,9 +85,13 @@ html {
                     font-size: 16px;
                     color: #8b8b8b;
                 }
-                span#range-value {
+                input[type="text"] {
                     font-size: 2rem;
-                    margin: 10px 0 20px 0;
+                    margin: 0 auto;
+                    width: 50px;
+                    &:focus-visible {
+                        outline: 0px #ffffff;
+                    }
                 }
                 input[type="range"] {
                     height: 5px;
@@ -96,16 +103,16 @@ html {
                     margin: 0 auto;
                     margin-bottom: 10px;
                     outline: 0;
-                }
-
-                input[type="range"]::-webkit-slider-thumb {
-                    -webkit-appearance: none;
-                    background-color: #84d0dd;
-                    width: 15px;
-                    height: 15px;
-                    border-radius: 50%;
-                    border: 2px solid white;
-                    cursor: pointer;
+                    
+                    &::-webkit-slider-thumb {
+                        -webkit-appearance: none;
+                        background-color: #84d0dd;
+                        width: 15px;
+                        height: 15px;
+                        border-radius: 50%;
+                        border: 2px solid white;
+                        cursor: pointer;
+                    }
                 }
             }
 
@@ -130,8 +137,10 @@ html {
 
                 .switch input {
                     opacity: 0;
-                    width: 0;
-                    height: 0;
+                    width: 52px;
+                    height: 24px;
+                    margin: 0;
+                    border-radius: 5px;
                 }
 
                 .slider {

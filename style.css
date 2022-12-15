@@ -15,7 +15,7 @@ html body {
 html body .container {
   z-index: 1;
   width: 400px;
-  height: 700px;
+  height: 70vh;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -43,6 +43,9 @@ html body .container input[type=text] {
   border: none;
   cursor: default;
 }
+html body .container input[type=text]:focus-visible {
+  outline: 0px #ffffff;
+}
 html body .container input[type=text],
 html body .container .box-container {
   padding: 15px;
@@ -60,9 +63,13 @@ html body .container #div-slider span#length-password {
   font-size: 16px;
   color: #8b8b8b;
 }
-html body .container #div-slider span#range-value {
+html body .container #div-slider input[type=text] {
   font-size: 2rem;
-  margin: 10px 0 20px 0;
+  margin: 0 auto;
+  width: 50px;
+}
+html body .container #div-slider input[type=text]:focus-visible {
+  outline: 0px #ffffff;
 }
 html body .container #div-slider input[type=range] {
   height: 5px;
@@ -104,8 +111,10 @@ html body .container .box-container .switch {
 }
 html body .container .box-container .switch input {
   opacity: 0;
-  width: 0;
-  height: 0;
+  width: 52px;
+  height: 24px;
+  margin: 0;
+  border-radius: 5px;
 }
 html body .container .box-container .slider {
   position: absolute;
