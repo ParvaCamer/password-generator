@@ -1,24 +1,24 @@
-const display = document.getElementById('range-value');
+const wordLength = document.getElementById('range-value');
+const display = document.querySelector('#password');
+let inputValue = wordLength.value;
 let array = [];
 
-let iValue = Math.floor(display.value / 4);
-
 const characters = {
-    lowerCase : 'abcdefghijklmnopqrstuvwxyz'.split(''),
-    upperCase : 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split(''),
-    symbols : '&~"#{([-|`_\^@)]=}*+.,?;:!§µ%¨£$¤€'.split(''),
-    numbers : '0123456789'.split('')
+    lowerCase: 'abcdefghijklmnopqrstuvwxyz'.split(''),
+    upperCase: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split(''),
+    symbols: '&~"#{([-|`_\^@)]=}*+.,?;:!§µ%¨£$¤€'.split(''),
+    numbers: '0123456789'.split('')
 };
 
 const isChecked = {
-    uppercase : false,
-    symbols : false,
-    numbers : false
-}
+    uppercase: false,
+    symbols: false,
+    numbers: false
+};
 
 function rangeSlide(value) {
-    display.value = value;
-    iValue = Math.floor(display.value / 4);
+    wordLength.value = value;
+    inputValue = value;
 };
 
 function check(value) {
@@ -29,76 +29,34 @@ function check(value) {
     }
 };
 
-function includeUppercases(checkbox) {
-
-    // if (checkbox.checked == true) {
-    //     let i = iValue;
-    //     while (i != 0) {
-    //         let randomNumber = Math.floor(Math.random() * alphabet.length);
-    //         array.push(alphabet[randomNumber].toUpperCase());
-    //         i--;
-    //     }
-    // } else {
-    //     for (let i = 0; i <= iValue; i++) {
-    //         array.pop()
-    //         i++
-    //     }
-    // }
-    console.log(array)
-};
-
-function includeSymbols(checkbox) {
-
-    // if (checkbox.checked == true) {
-    //     let i = iValue;
-    //     while (i != 0) {
-    //         let randomNumber = Math.floor(Math.random() * symbols.length);
-    //         array.push(symbols[randomNumber]);
-    //         i--;
-    //     }
-    // } else {
-    //     for (let i = 0; i <= iValue; i++) {
-    //         array.pop()
-    //         i++
-    //     }
-    // }
-    console.log('test')
-};
-
-function includeNumbers() {
-
-    // if (checkbox.checked == true) {
-    //     let i = iValue;
-        
-    //     while (i != 0) {
-    //         let randomNumber = Math.floor(Math.random() * numbers.length);
-    //         array.push(numbers[randomNumber]);
-    //         i--;
-    //     }
-    // } else {
-    //     for (let i = 0; i <= iValue; i++) {
-    //         array.pop()
-    //         i++
-    //     }
-    // }
-    console.log('array')
+function includeCharacters(charactersArray) {
+    let iValue = Math.floor(wordLength.value / 4);
+    while (iValue > 0) {
+        let randomNumber = Math.floor(Math.random() * charactersArray.length);
+        array.push(charactersArray[randomNumber]);
+        iValue--;
+    }
 };
 
 function generatePassword() {
-    // while (array.length < display.value) {
-    //     let randomNumber = Math.floor(Math.random() * alphabet.length);
-    //     array.push(alphabet[randomNumber]);
-    // }
-    // console.log(array);
+    array = [];
     for (const value in isChecked) {
-        // console.log(value)
-        // console.log(isChecked[value])
         if (value === 'uppercase' && isChecked[value]) {
-            includeUppercases();
+            includeCharacters(characters.upperCase);
         } else if (value === 'symbols' && isChecked[value]) {
-            includeSymbols();
+            includeCharacters(characters.symbols);
         } else if (value === 'numbers' && isChecked[value]) {
-            includeNumbers();
+            includeCharacters(characters.numbers);
         }
     }
-}
+    while ( array.length < inputValue) {
+        let randomNumber = Math.floor(Math.random() * characters.lowerCase.length);
+        array.push(characters.lowerCase[randomNumber]);
+    }
+    display.value = array.sort(() =>Math.random() - 0.5).join('');
+    if (inputValue >= 22) {
+        display.style.fontSize = "0.8rem";
+    } else {
+        display.style.fontSize = "1rem";
+    }
+};

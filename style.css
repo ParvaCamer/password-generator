@@ -41,6 +41,7 @@ html body .container button {
 html body .container input[type=text] {
   text-align: center;
   border: none;
+  height: 35px;
   cursor: default;
 }
 html body .container input[type=text]:focus-visible {
